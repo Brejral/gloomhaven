@@ -1,0 +1,13 @@
+<ActionBar>
+	<Label text="Scenario"></Label>
+</ActionBar>
+<StackLayout verticalAlignment="stretch">
+	<StackLayout class="scenario" horizontalAlignment="center" verticalAlignment="stretch">
+		<StackLayout orientation="horizontal">
+			<Label text="Deck: "></Label>
+			<Label [text]="deck.length"></Label>
+		</StackLayout>
+		<Label *ngFor="let card of discardPile" [text]="card.text"></Label>
+	</StackLayout>
+	<Button class="-primary" dock="bottom" text="Draw" (tap)="drawCard()"></Button>
+</StackLayout>
