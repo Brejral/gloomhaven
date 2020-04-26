@@ -22,6 +22,7 @@
     "no-irregular-whitespace": true,
     "no-output-on-prefix": true,
     "no-output-rename": true,
+    "no-empty": false,
     "no-submodule-imports": false,
     "no-trailing-whitespace": [true, "ignore-blank-lines"],
     "no-unnecessary-initializer": true,

@@ -7,7 +7,7 @@ const routes: Routes = [
     {
         path: "",
         redirectTo:
-            "/(gloomhavenTab:gloomhaven/default//browseTab:browse/default//scenarioTab:scenario/default)",
+            "/(gloomhavenTab:gloomhaven/default//partiesTab:parties/list//charactersTab:characters/list//scenarioTab:scenario/select)",
         pathMatch: "full",
     },
 
@@ -18,14 +18,21 @@ const routes: Routes = [
             import("~/app/gloomhaven/gloomhaven.module").then(
                 (m) => m.GloomhavenModule
             ),
-        outlet: "gloomhaven",
+        outlet: "gloomhavenTab",
     },
     {
-        path: "browse",
+        path: "parties",
         component: NSEmptyOutletComponent,
         loadChildren: () =>
-            import("~/app/browse/browse.module").then((m) => m.BrowseModule),
-        outlet: "browseTab",
+            import("~/app/parties/parties.module").then((m) => m.PartiesModule),
+        outlet: "partiesTab",
+    },
+    {
+        path: "characters",
+        component: NSEmptyOutletComponent,
+        loadChildren: () =>
+            import("~/app/characters/characters.module").then((m) => m.CharactersModule),
+        outlet: "charactersTab",
     },
     {
         path: "scenario",
@@ -42,4 +49,4 @@ const routes: Routes = [
     imports: [NativeScriptRouterModule.forRoot(routes)],
     exports: [NativeScriptRouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

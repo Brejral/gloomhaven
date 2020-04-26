@@ -1,0 +1,13 @@
+.scenario {
+	font-size: 16;
+	font-family: "Philosopher-Bold";
+
+	&__title {
+		margin-top: 10;
+	}
+
+	&__image {
+		border-radius: 28%;
+		margin: 10
+	}
+}

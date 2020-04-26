@@ -443,7 +443,7 @@ export const scenarios: Scenario[] = [
     },
     {
         id: 43,
-        name: "- Drake Nest",
+        name: "Drake Nest",
         monsters: [
             MonsterType.FlameDemon,
             MonsterType.RendingDrake,
@@ -492,7 +492,7 @@ export const scenarios: Scenario[] = [
     },
     {
         id: 48,
-        name: "- Shadow Weald",
+        name: "Shadow Weald",
         monsters: [
             MonsterType.ForestImp,
             MonsterType.EarthDemon,

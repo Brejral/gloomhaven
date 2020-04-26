@@ -1,0 +1,19 @@
+<ActionBar>
+	<NavigationButton text="None"></NavigationButton>
+	<Label text="Select Scenario"></Label>
+</ActionBar>
+
+<GridLayout class="scenario-select">
+	<ListView [items]="scenarios">
+		<ng-template let-scenario="item">
+			<StackLayout [nsRouterLink]="['../scenario', scenario.id]"
+						 orientation="horizontal">
+				<Label class="id"
+					   [text]="scenario.id"
+					   width="40"></Label>
+				<Label class="name"
+					   [text]="scenario.name"></Label>
+			</StackLayout>
+		</ng-template>
+	</ListView>
+</GridLayout>

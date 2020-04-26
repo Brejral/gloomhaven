@@ -2,14 +2,16 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { ScenarioComponent } from "./scenario.component";
+import { ScenarioSelectComponent } from "./components/scenario-select/scenario-select.component";
+import { ScenarioComponent } from "./components/scenario/scenario.component";
 
 const routes: Routes = [
-    { path: "default", component: ScenarioComponent },
+    { path: "select", component: ScenarioSelectComponent },
+    { path: "scenario/:id", component: ScenarioComponent },
 ];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule],
 })
-export class ScenarioRoutingModule { }
+export class ScenarioRoutingModule {}

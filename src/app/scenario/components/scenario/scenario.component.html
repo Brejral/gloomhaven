@@ -1,0 +1,17 @@
+<ActionBar>
+	<Label [text]="scenario.id + ': ' + scenario.name"></Label>
+</ActionBar>
+
+<GridLayout class="scenario">
+	<StackLayout>
+		<StackLayout orientation="horizontal"
+					 *ngFor="let monster of scenario.monsters"
+					 height="100">
+			<Image class="scenario__image"
+				   [src]="getImage(monster)"></Image>
+			<Label class="scenario__title"
+				   [text]="monster"
+				   verticalAlignment="top"></Label>
+		</StackLayout>
+	</StackLayout>
+</GridLayout>
