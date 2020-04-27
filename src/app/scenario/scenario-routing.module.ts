@@ -7,11 +7,11 @@ import { ScenarioComponent } from "./components/scenario/scenario.component";
 
 const routes: Routes = [
     { path: "select", component: ScenarioSelectComponent },
-    { path: "scenario/:id", component: ScenarioComponent },
+    { path: ":id", component: ScenarioComponent },
 ];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule],
 })
-export class ScenarioRoutingModule {}
+export class ScenarioRoutingModule { }

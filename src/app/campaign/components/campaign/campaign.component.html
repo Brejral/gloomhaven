@@ -1,0 +1,11 @@
+<GridLayout class='campaign'>
+	<ListView class="campaign__list"
+			  [items]="items">
+		<ng-template let-item="item">
+			<StackLayout>
+				<Label [nsRouterLink]="['../item', item.route]"
+					   [text]="item.name"></Label>
+			</StackLayout>
+		</ng-template>
+	</ListView>
+</GridLayout>

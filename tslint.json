@@ -39,6 +39,7 @@
     "use-pipe-transform-interface": true,
     "max-line-length": false,
     "quotemark": false,
+    "no-namespace": false,
     "trailing-comma": [
       true,
       {

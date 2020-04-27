@@ -1,6 +1,9 @@
 .scenario {
 	font-size: 16;
 	font-family: "Philosopher-Bold";
+	color: black;
+	background: url("~/images/background/background.jpg");
+	background-size: contain;
 
 	&__title {
 		margin-top: 10;

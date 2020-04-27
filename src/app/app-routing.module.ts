@@ -7,18 +7,18 @@ const routes: Routes = [
     {
         path: "",
         redirectTo:
-            "/(gloomhavenTab:gloomhaven/default//partiesTab:parties/list//charactersTab:characters/list//scenarioTab:scenario/select)",
+            "/(campaignTab:campaign/default//partiesTab:parties/list//charactersTab:characters/list//scenarioTab:scenario/select)",
         pathMatch: "full",
     },
 
     {
-        path: "gloomhaven",
+        path: "campaign",
         component: NSEmptyOutletComponent,
         loadChildren: () =>
-            import("~/app/gloomhaven/gloomhaven.module").then(
-                (m) => m.GloomhavenModule
+            import("~/app/campaign/campaign.module").then(
+                (m) => m.CampaignModule
             ),
-        outlet: "gloomhavenTab",
+        outlet: "campaignTab",
     },
     {
         path: "parties",

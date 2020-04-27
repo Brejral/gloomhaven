@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 
 export interface DataItem {
-    id: number;
+    route: string;
     name: string;
     description: string;
 }
@@ -11,114 +11,55 @@ export interface DataItem {
 })
 export class DataService {
 
-    private items = new Array<DataItem>(
+    private items: DataItem[] = [
         {
-            id: 1,
-            name: "Item 1",
+            route: 'map',
+            name: "Map",
             description: "Description for Item 1",
         },
         {
-            id: 2,
-            name: "Item 2",
-            description: "Description for Item 2",
+            route: 'classes',
+            name: "Classes",
+            description: "Description for Item 1",
         },
         {
-            id: 3,
-            name: "Item 3",
-            description: "Description for Item 3",
+            route: 'events',
+            name: "Events",
+            description: "Description for Item 1",
         },
         {
-            id: 4,
-            name: "Item 4",
-            description: "Description for Item 4",
+            route: 'scenarios',
+            name: "Scenarios",
+            description: "Description for Item 1",
         },
         {
-            id: 5,
-            name: "Item 5",
-            description: "Description for Item 5",
+            route: 'global-achievements',
+            name: "Global Achievements",
+            description: "Description for Item 1",
         },
         {
-            id: 6,
-            name: "Item 6",
-            description: "Description for Item 6",
+            route: 'items',
+            name: "Items",
+            description: "Description for Item 1",
         },
         {
-            id: 7,
-            name: "Item 7",
-            description: "Description for Item 7",
+            route: 'treasures',
+            name: "Treasures",
+            description: "Description for Item 1",
         },
         {
-            id: 8,
-            name: "Item 8",
-            description: "Description for Item 8",
+            route: 'envelopes',
+            name: "Envelopes",
+            description: "Description for Item 1",
         },
         {
-            id: 9,
-            name: "Item 9",
-            description: "Description for Item 9",
+            route: 'party-journal',
+            name: "Party Journal",
+            description: "Description for Item 1",
         },
-        {
-            id: 10,
-            name: "Item 10",
-            description: "Description for Item 10",
-        },
-        {
-            id: 11,
-            name: "Item 11",
-            description: "Description for Item 11",
-        },
-        {
-            id: 12,
-            name: "Item 12",
-            description: "Description for Item 12",
-        },
-        {
-            id: 13,
-            name: "Item 13",
-            description: "Description for Item 13",
-        },
-        {
-            id: 14,
-            name: "Item 14",
-            description: "Description for Item 14",
-        },
-        {
-            id: 15,
-            name: "Item 15",
-            description: "Description for Item 15",
-        },
-        {
-            id: 16,
-            name: "Item 16",
-            description: "Description for Item 16",
-        },
-        {
-            id: 17,
-            name: "Item 17",
-            description: "Description for Item 17",
-        },
-        {
-            id: 18,
-            name: "Item 18",
-            description: "Description for Item 18",
-        },
-        {
-            id: 19,
-            name: "Item 19",
-            description: "Description for Item 19",
-        },
-        {
-            id: 20,
-            name: "Item 20",
-            description: "Description for Item 20",
-        },
-    );
+    ];
 
-    getItems(): Array<DataItem> {
+    public getItems(): DataItem[] {
         return this.items;
-    }
-
-    getItem(id: number): DataItem {
-        return this.items.filter((item) => item.id === id)[0];
     }
 }
